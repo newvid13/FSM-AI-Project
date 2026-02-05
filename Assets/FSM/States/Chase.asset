@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10e66d1442d13824ca8ebb061ca9436c, type: 3}
+  m_Name: Chase
+  m_EditorClassIdentifier: Assembly-CSharp::FSMState
+  updateActions:
+  - {fileID: 11400000, guid: ed0325452a39f5240a03b7cf34e1bf8b, type: 2}
+  enterActions: []
+  exitActions: []
+  transitions:
+  - {fileID: 11400000, guid: 45dc7fcf48b10c5419a383f2352b5fff, type: 2}
