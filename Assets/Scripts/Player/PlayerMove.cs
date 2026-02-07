@@ -31,6 +31,9 @@ public class PlayerMove : MonoBehaviour
         dirRight.y = 0;
         dirForward = Camera.main.transform.forward;
         dirForward.y = 0;
+
+        dirRight.Normalize();
+        dirForward.Normalize();
     }
 
     private void FixedUpdate()

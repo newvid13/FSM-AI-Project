@@ -25,4 +25,12 @@ public class EnemySight : MonoBehaviour
 
         seenPlayer = null;
     }
+
+    public float DistanceToPlayer()
+    {
+        if (seenPlayer == null)
+            return Mathf.Infinity;
+
+        return(Vector3.Distance(seenPlayer.position, transform.position));
+    }
 }
