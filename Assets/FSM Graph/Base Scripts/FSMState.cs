@@ -30,7 +30,7 @@ public class FSMState : FSMStateBase
     {
         //Execute update actions
         foreach (FSMAction action in updateActions)
-            action?.Execute(machine);
+            action.Execute(machine);
 
         //Execute transitions
         for (int i = 0; i < transitions.Count; i++)

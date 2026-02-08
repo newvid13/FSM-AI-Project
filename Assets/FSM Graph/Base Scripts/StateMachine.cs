@@ -11,6 +11,7 @@ public class StateMachine : MonoBehaviour
     [SerializeField] float updateFrequency;
 
     FSMState currentState;
+    FSMState_Any anyState;
     Dictionary<Type, Component> components = new Dictionary<Type, Component>();
 
     //Debug
@@ -18,13 +19,14 @@ public class StateMachine : MonoBehaviour
 
     private void Awake()
     {
-        FindStartingNode();
+        FindStartingState();
+        FindAnyState();
         InvokeRepeating(nameof(RunMachine), updateFrequency, updateFrequency);
     }
 
-    private void FindStartingNode()
+    private void FindStartingState()
     {
-        foreach (FSMStateBase startNode in AIGraph.nodes)
+        foreach (Node startNode in AIGraph.nodes)
         {
             if (startNode is FSMState_Initial)
             {
@@ -40,11 +42,25 @@ public class StateMachine : MonoBehaviour
         throw new Exception("No Starting Node Found");
     }
 
+    private void FindAnyState()
+    {
+        foreach (Node anyNode in AIGraph.nodes)
+        {
+            if (anyNode is FSMState_Any)
+            {
+                anyState = anyNode as FSMState_Any;
+                return;
+            }
+        }
+    }
+
     private void RunMachine()
     {
         if (!isActive)
             return;
 
+        if(anyState != null)
+            anyState.OnUpdate(this);
         currentState.OnUpdate(this);
     }
 
@@ -53,9 +69,10 @@ public class StateMachine : MonoBehaviour
         if (newState == currentState)
             throw new Exception("Tried to change into current state");
 
-        currentState?.OnExit(this);
+        if(currentState != null)
+            currentState.OnExit(this);
         currentState = newState;
-        currentState?.OnEnter(this);
+        currentState.OnEnter(this);
 
         //Debug
         stateText.text = newState.ToString();
@@ -77,5 +94,10 @@ public class StateMachine : MonoBehaviour
             throw new Exception("No Such Component");
         }
 
+    }
+
+    public void ToggleActive(bool state)
+    {
+        isActive = state;
     }
 }

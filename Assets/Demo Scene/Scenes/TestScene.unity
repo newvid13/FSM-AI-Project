@@ -5307,11 +5307,11 @@ Transform:
   m_GameObject: {fileID: 203844586}
   serializedVersion: 2
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 10, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 10.48, z: 0}
+  m_LocalScale: {x: 0.02, y: 0.0336085, z: 0.047068525}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1327070442}
+  m_Father: {fileID: 1376523022}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &250285640
 GameObject:
@@ -5747,6 +5747,7 @@ GameObject:
   - component: {fileID: 959714970}
   - component: {fileID: 959714969}
   - component: {fileID: 959714975}
+  - component: {fileID: 959714977}
   - component: {fileID: 959714974}
   - component: {fileID: 959714973}
   - component: {fileID: 959714976}
@@ -5938,6 +5939,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyWeapon
   attackPart: {fileID: 145666558}
   reloadTime: 1
+--- !u!114 &959714977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959714967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b66bc07455da2ea418e7af20e9f62b2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
+  health: 10
 --- !u!1 &961739749
 GameObject:
   m_ObjectHideFlags: 0
@@ -6371,7 +6385,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 203844589}
   - {fileID: 961739753}
   - {fileID: 1036962804}
   - {fileID: 1376523022}
@@ -6522,6 +6535,7 @@ Transform:
   m_Children:
   - {fileID: 250285641}
   - {fileID: 99693207}
+  - {fileID: 203844589}
   m_Father: {fileID: 1327070442}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1512884672
@@ -6691,6 +6705,7 @@ GameObject:
   - component: {fileID: 1719870637}
   - component: {fileID: 1719870636}
   - component: {fileID: 1719870639}
+  - component: {fileID: 1719870643}
   - component: {fileID: 1719870641}
   - component: {fileID: 1719870642}
   - component: {fileID: 1719870640}
@@ -6866,6 +6881,19 @@ MonoBehaviour:
   sightFrequency: 0.2
   sightRadius: 7
   seenPlayer: {fileID: 0}
+--- !u!114 &1719870643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1719870634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b66bc07455da2ea418e7af20e9f62b2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
+  health: 10
 --- !u!1 &1736239079
 GameObject:
   m_ObjectHideFlags: 0
