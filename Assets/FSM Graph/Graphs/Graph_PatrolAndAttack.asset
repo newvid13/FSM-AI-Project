@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Stay In State
   m_EditorClassIdentifier: Assembly-CSharp::FSMState_StayInCurrent
   graph: {fileID: 11400000}
-  position: {x: 344, y: -376}
+  position: {x: 280, y: -360}
   ports:
     keys:
     - entry
@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: Stay In State
   m_EditorClassIdentifier: Assembly-CSharp::FSMState_StayInCurrent
   graph: {fileID: 11400000}
-  position: {x: 2056, y: -632}
+  position: {x: 2008, y: -600}
   ports:
     keys:
     - entry
@@ -239,7 +239,7 @@ MonoBehaviour:
   m_Name: Fork
   m_EditorClassIdentifier: Assembly-CSharp::FSMTransitionFork
   graph: {fileID: 11400000}
-  position: {x: -680, y: -376}
+  position: {x: 584, y: 152}
   ports:
     keys:
     - entry
@@ -298,7 +298,7 @@ MonoBehaviour:
   m_Name: Patrol
   m_EditorClassIdentifier: Assembly-CSharp::FSMState
   graph: {fileID: 11400000}
-  position: {x: -392, y: -152}
+  position: {x: 968, y: 280}
   ports:
     keys:
     - entry
@@ -570,7 +570,7 @@ MonoBehaviour:
   m_Name: Stay In State
   m_EditorClassIdentifier: Assembly-CSharp::FSMState_StayInCurrent
   graph: {fileID: 11400000}
-  position: {x: -392, y: -408}
+  position: {x: 792, y: 104}
   ports:
     keys:
     - entry
@@ -601,7 +601,7 @@ MonoBehaviour:
   m_Name: START
   m_EditorClassIdentifier: Assembly-CSharp::FSMState_Initial
   graph: {fileID: 11400000}
-  position: {x: -808, y: -40}
+  position: {x: 600, y: 536}
   ports:
     keys:
     - exit

@@ -1,16 +1,16 @@
 using System.Collections.Generic;
 using UnityEngine;
-using XNode;
 
 [CreateNodeMenu("State Node"), NodeWidth(350), NodeTint("#4A5423")]
 public class FSMState : FSMStateBase
 {
     [Input(backingValue = ShowBackingValue.Never)] public int entry;
-    [Output(dynamicPortList = true)] public FSMTransition[] transitions;
 
     public List<FSMAction> updateActions = new List<FSMAction>();
     public List<FSMAction> enterActions = new List<FSMAction>();
     public List<FSMAction> exitActions = new List<FSMAction>();
+
+    [Output(dynamicPortList = true)] public List<FSMTransition> transitions = new List<FSMTransition>();
 
     public virtual void OnEnter(StateMachine machine)
     {
@@ -33,14 +33,14 @@ public class FSMState : FSMStateBase
             action?.Execute(machine);
 
         //Execute transitions
-        for (int i = 0; i < transitions.Length; i++)
+        for (int i = 0; i < transitions.Count; i++)
         {
             FSMTransitionFork connectedFork = GetOutputPort("transitions " + i.ToString()).Connection.node as FSMTransitionFork;
             FSMStateBase returnedState = connectedFork.ForkResult(transitions[i].Decide(machine));
 
             if (returnedState is not FSMState_StayInCurrent)
             {
-                machine.ChangeState(returnedState);
+                machine.ChangeState(returnedState as FSMState);
                 break;
             }
         }

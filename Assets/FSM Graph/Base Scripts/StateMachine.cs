@@ -10,7 +10,7 @@ public class StateMachine : MonoBehaviour
     [SerializeField] bool isActive;
     [SerializeField] float updateFrequency;
 
-    FSMStateBase currentState;
+    FSMState currentState;
     Dictionary<Type, Component> components = new Dictionary<Type, Component>();
 
     //Debug
@@ -31,7 +31,7 @@ public class StateMachine : MonoBehaviour
                 NodePort outPort = startNode.GetOutputPort("exit").Connection;
                 if (outPort != null)
                 {
-                    ChangeState(outPort.node as FSMStateBase);
+                    ChangeState(outPort.node as FSMState);
                     return;
                 }
             }
@@ -45,17 +45,17 @@ public class StateMachine : MonoBehaviour
         if (!isActive)
             return;
 
-        (currentState as FSMState).OnUpdate(this);
+        currentState.OnUpdate(this);
     }
 
-    public void ChangeState(FSMStateBase newState)
+    public void ChangeState(FSMState newState)
     {
         if (newState == currentState)
             throw new Exception("Tried to change into current state");
 
-        (currentState as FSMState)?.OnExit(this);
+        currentState?.OnExit(this);
         currentState = newState;
-        (currentState as FSMState)?.OnEnter(this);
+        currentState?.OnEnter(this);
 
         //Debug
         stateText.text = newState.ToString();
