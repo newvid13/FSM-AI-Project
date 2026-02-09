@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PatrolPoints : MonoBehaviour
+public class EnemyPatrol : MonoBehaviour
 {
     [SerializeField] Transform[] points;
     int currentPoint;

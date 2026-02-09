@@ -97,8 +97,9 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: transitions
       _node: {fileID: -6386714598227895835}
-      _typeQualifiedName: FSMTransition[], Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: System.Collections.Generic.List`1[[FSMTransition, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
+        Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -110,7 +111,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: entry
-        node: {fileID: -4963899704343917319}
+        node: {fileID: -5577151959138687531}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -122,20 +123,20 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: entry
-        node: {fileID: -5577151959138687531}
+        node: {fileID: -4963899704343917319}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 1
   entry: 0
-  transitions:
-  - {fileID: 11400000, guid: 8c6b8cc70f39a7544b53143d61e4bf0e, type: 2}
-  - {fileID: 11400000, guid: ef1d82926544b174595b93651ffbc0f3, type: 2}
   updateActions:
   - {fileID: 11400000, guid: ed0325452a39f5240a03b7cf34e1bf8b, type: 2}
   enterActions: []
   exitActions: []
+  transitions:
+  - {fileID: 11400000, guid: 68a3bfe2cc0d6e74689991986c56c2f5, type: 2}
+  - {fileID: 11400000, guid: 8c6b8cc70f39a7544b53143d61e4bf0e, type: 2}
 --- !u!114 &-5577151959138687531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,7 +162,7 @@ MonoBehaviour:
       _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       connections:
-      - fieldName: transitions 1
+      - fieldName: transitions 0
         node: {fileID: -6386714598227895835}
         reroutePoints: []
       _direction: 0
@@ -251,7 +252,7 @@ MonoBehaviour:
       _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       connections:
-      - fieldName: transitions 0
+      - fieldName: transitions 1
         node: {fileID: -6386714598227895835}
         reroutePoints: []
       _direction: 0
@@ -325,8 +326,9 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: transitions
       _node: {fileID: -1273389775414328287}
-      _typeQualifiedName: FSMTransition[], Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: System.Collections.Generic.List`1[[FSMTransition, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
+        Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -345,13 +347,13 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 1
   entry: 0
-  transitions:
-  - {fileID: 11400000, guid: 8c6b8cc70f39a7544b53143d61e4bf0e, type: 2}
   updateActions:
   - {fileID: 11400000, guid: fb9a094967ed207448ac158f4d0cef06, type: 2}
   enterActions:
   - {fileID: 11400000, guid: 8892d4e68a5e70042a516243ec900836, type: 2}
   exitActions: []
+  transitions:
+  - {fileID: 11400000, guid: 8c6b8cc70f39a7544b53143d61e4bf0e, type: 2}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -411,8 +413,9 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: transitions
       _node: {fileID: 1221434278091386547}
-      _typeQualifiedName: FSMTransition[], Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: System.Collections.Generic.List`1[[FSMTransition, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
+        Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -431,14 +434,14 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 1
   entry: 0
-  transitions:
-  - {fileID: 11400000, guid: 8c6b8cc70f39a7544b53143d61e4bf0e, type: 2}
   updateActions:
   - {fileID: 11400000, guid: b6780829af9aa0a418db447d882096ff, type: 2}
   - {fileID: 11400000, guid: 7701ccf125068d14e931518d84368840, type: 2}
   enterActions:
   - {fileID: 11400000, guid: c21e55f80f6f85343a0962e6e509397a, type: 2}
   exitActions: []
+  transitions:
+  - {fileID: 11400000, guid: 8c6b8cc70f39a7544b53143d61e4bf0e, type: 2}
 --- !u!114 &1814898974627765341
 MonoBehaviour:
   m_ObjectHideFlags: 0

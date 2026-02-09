@@ -7,11 +7,11 @@ public class FSMAction_Patrol : FSMAction
     public override void Execute(StateMachine machine)
     {
         NavMeshAgent agent = machine.GetComponent<NavMeshAgent>();
-        PatrolPoints points = machine.GetComponent<PatrolPoints>();
+        EnemyPatrol patrol = machine.GetComponent<EnemyPatrol>();
         
-        if(points.HasReachedPoint())
+        if(patrol.HasReachedPoint())
         {
-            agent.SetDestination(points.GetNextPoint().position);
+            agent.SetDestination(patrol.GetNextPoint().position);
         }
     }
 }

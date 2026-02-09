@@ -22,10 +22,10 @@ public class PlayerMove : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         moveAction = InputSystem.actions.FindAction("Move");
-        UpdateOrientationRelativeToCamera();
+        UpdateInputRelativeToCamera();
     }
 
-    private void UpdateOrientationRelativeToCamera()
+    private void UpdateInputRelativeToCamera()
     {
         dirRight = Camera.main.transform.right;
         dirRight.y = 0;
@@ -38,13 +38,18 @@ public class PlayerMove : MonoBehaviour
 
     private void FixedUpdate()
     {
+        GetInput();
         Move();
         Orientation();
     }
 
-    private void Move()
+    private void GetInput()
     {
         input = moveAction.ReadValue<Vector2>();
+    }
+
+    private void Move()
+    {
         moveDirection = dirRight * input.x + dirForward * input.y;
         rb.linearVelocity = moveDirection * moveSpeed;
     }

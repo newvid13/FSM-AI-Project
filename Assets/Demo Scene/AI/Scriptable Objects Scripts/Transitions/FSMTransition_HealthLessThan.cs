@@ -8,7 +8,7 @@ public class FSMTransition_HealthLessThan : FSMTransition
     {
         EnemyHealth health = machine.GetComponent<EnemyHealth>();
 
-        if (health.ReturnHealth() < healthAmount)
+        if (health.GetHealth() < healthAmount)
             return true;
         else
             return false;

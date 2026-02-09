@@ -7,8 +7,8 @@ public class FSMAction_MoveToPatrolPoint : FSMAction
     public override void Execute(StateMachine machine)
     {
         NavMeshAgent agent = machine.GetComponent<NavMeshAgent>();
-        PatrolPoints points = machine.GetComponent<PatrolPoints>();
+        EnemyPatrol patrol = machine.GetComponent<EnemyPatrol>();
 
-        agent.SetDestination(points.GetCurrentPoint().position);
+        agent.SetDestination(patrol.GetCurrentPoint().position);
     }
 }

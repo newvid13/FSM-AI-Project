@@ -4,19 +4,14 @@ public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] int health;
 
-    private void Start()
-    {
-        TestWait();
-    }
-
-    public int ReturnHealth()
+    public int GetHealth()
     { 
         return health; 
     }
 
-    private async void TestWait()
+    public void Damage(int amount)
     {
-        await Awaitable.WaitForSecondsAsync(10);
-        health = 0;
+        health -= amount;
+        health = Mathf.Clamp(health, 0, 10);
     }
 }
