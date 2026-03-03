@@ -1,0 +1,715 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7433178181470011752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8f8b82f5ed7a574391db1af0cac7ccc, type: 3}
+  m_Name: Stay In State
+  m_EditorClassIdentifier: Oldwiolence.FSMAI::FSMAI.FSMState_StayInCurrent
+  graph: {fileID: 11400000}
+  position: {x: 552, y: -1160}
+  ports:
+    keys:
+    - entry
+    values:
+    - _fieldName: entry
+      _node: {fileID: -7433178181470011752}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: falseState
+        node: {fileID: 1345712014280879327}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: 0
+--- !u!114 &-7306836702450289078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8f8b82f5ed7a574391db1af0cac7ccc, type: 3}
+  m_Name: Stay In State
+  m_EditorClassIdentifier: Oldwiolence.FSMAI::FSMAI.FSMState_StayInCurrent
+  graph: {fileID: 11400000}
+  position: {x: -40, y: -776}
+  ports:
+    keys:
+    - entry
+    values:
+    - _fieldName: entry
+      _node: {fileID: -7306836702450289078}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: trueState
+        node: {fileID: 7600469711152978379}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: 0
+--- !u!114 &-5081509433825272867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d851a72539fe20140af2e7e5a1849d5e, type: 3}
+  m_Name: Fork
+  m_EditorClassIdentifier: Oldwiolence.FSMAI::FSMAI.FSMTransitionFork
+  graph: {fileID: 11400000}
+  position: {x: 373.36884, y: 453.052}
+  ports:
+    keys:
+    - entry
+    - trueState
+    - falseState
+    values:
+    - _fieldName: entry
+      _node: {fileID: -5081509433825272867}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: transitions 0
+        node: {fileID: 1132152867406791195}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: trueState
+      _node: {fileID: -5081509433825272867}
+      _typeQualifiedName: FSMAI.FSMStateBase, Oldwiolence.FSMAI, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 6469860522698164521}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: falseState
+      _node: {fileID: -5081509433825272867}
+      _typeQualifiedName: FSMAI.FSMStateBase, Oldwiolence.FSMAI, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 4695219457026774023}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: 0
+  trueState: {fileID: 0}
+  falseState: {fileID: 0}
+--- !u!114 &-4249722693190199155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10e66d1442d13824ca8ebb061ca9436c, type: 3}
+  m_Name: Chase
+  m_EditorClassIdentifier: Oldwiolence.FSMAI::FSMAI.FSMState
+  graph: {fileID: 11400000}
+  position: {x: 1064, y: -344}
+  ports:
+    keys:
+    - entry
+    - transitions
+    - transitions 0
+    - transitions 1
+    values:
+    - _fieldName: entry
+      _node: {fileID: -4249722693190199155}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: trueState
+        node: {fileID: -910737799300949000}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: transitions
+      _node: {fileID: -4249722693190199155}
+      _typeQualifiedName: System.Collections.Generic.List`1[[FSMAI.FSMTransition,
+        Oldwiolence.FSMAI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: transitions 0
+      _node: {fileID: -4249722693190199155}
+      _typeQualifiedName: FSMAI.FSMTransition, Oldwiolence.FSMAI, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 1345712014280879327}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: transitions 1
+      _node: {fileID: -4249722693190199155}
+      _typeQualifiedName: FSMAI.FSMTransition, Oldwiolence.FSMAI, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 7600469711152978379}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  entry: 0
+  updateActions:
+  - {fileID: 11400000, guid: 3ece551b605d23d488c79241edb34e27, type: 2}
+  enterActions: []
+  exitActions: []
+  transitions:
+  - {fileID: 11400000, guid: 97245e0f134b91f40b0e7dfe48293b3f, type: 2}
+  - {fileID: 11400000, guid: 46894cd239ab57046b6629e8dc1d2cde, type: 2}
+--- !u!114 &-910737799300949000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d851a72539fe20140af2e7e5a1849d5e, type: 3}
+  m_Name: Fork
+  m_EditorClassIdentifier: Oldwiolence.FSMAI::FSMAI.FSMTransitionFork
+  graph: {fileID: 11400000}
+  position: {x: 584, y: -264}
+  ports:
+    keys:
+    - entry
+    - trueState
+    - falseState
+    values:
+    - _fieldName: entry
+      _node: {fileID: -910737799300949000}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: transitions 0
+        node: {fileID: 4847306899676167719}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: trueState
+      _node: {fileID: -910737799300949000}
+      _typeQualifiedName: FSMAI.FSMStateBase, Oldwiolence.FSMAI, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: -4249722693190199155}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: falseState
+      _node: {fileID: -910737799300949000}
+      _typeQualifiedName: FSMAI.FSMStateBase, Oldwiolence.FSMAI, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 6676830022143172265}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: 0
+  trueState: {fileID: 0}
+  falseState: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ad4f66462c186e4199d24fd0ee32be2, type: 3}
+  m_Name: Graph_ChaseAttack
+  m_EditorClassIdentifier: Oldwiolence.FSMAI::FSMAI.FSMGraph
+  nodes:
+  - {fileID: 6499170687226738946}
+  - {fileID: 1132152867406791195}
+  - {fileID: 6469860522698164521}
+  - {fileID: 4847306899676167719}
+  - {fileID: -4249722693190199155}
+  - {fileID: 4313475893415332120}
+  - {fileID: -910737799300949000}
+  - {fileID: 6676830022143172265}
+  - {fileID: 7600469711152978379}
+  - {fileID: -7306836702450289078}
+  - {fileID: 1345712014280879327}
+  - {fileID: -7433178181470011752}
+  - {fileID: -5081509433825272867}
+  - {fileID: 4695219457026774023}
+--- !u!114 &1132152867406791195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef070c4c0553d7b4fbf595bfcfe34366, type: 3}
+  m_Name: ANY
+  m_EditorClassIdentifier: Oldwiolence.FSMAI::FSMAI.FSMState_Any
+  graph: {fileID: 11400000}
+  position: {x: -152, y: 280}
+  ports:
+    keys:
+    - transitions
+    - transitions 0
+    values:
+    - _fieldName: transitions
+      _node: {fileID: 1132152867406791195}
+      _typeQualifiedName: System.Collections.Generic.List`1[[FSMAI.FSMTransition,
+        Oldwiolence.FSMAI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: transitions 0
+      _node: {fileID: 1132152867406791195}
+      _typeQualifiedName: FSMAI.FSMTransition, Oldwiolence.FSMAI, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: -5081509433825272867}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  transitions:
+  - {fileID: 11400000, guid: 9d9698e61c0f5c5448293f7ddaa34b54, type: 2}
+--- !u!114 &1345712014280879327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d851a72539fe20140af2e7e5a1849d5e, type: 3}
+  m_Name: Fork
+  m_EditorClassIdentifier: Oldwiolence.FSMAI::FSMAI.FSMTransitionFork
+  graph: {fileID: 11400000}
+  position: {x: 376, y: -1256}
+  ports:
+    keys:
+    - entry
+    - trueState
+    - falseState
+    values:
+    - _fieldName: entry
+      _node: {fileID: 1345712014280879327}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: transitions 0
+        node: {fileID: -4249722693190199155}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: trueState
+      _node: {fileID: 1345712014280879327}
+      _typeQualifiedName: FSMAI.FSMStateBase, Oldwiolence.FSMAI, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 4313475893415332120}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: falseState
+      _node: {fileID: 1345712014280879327}
+      _typeQualifiedName: FSMAI.FSMStateBase, Oldwiolence.FSMAI, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: -7433178181470011752}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: 0
+  trueState: {fileID: 0}
+  falseState: {fileID: 0}
+--- !u!114 &4313475893415332120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10e66d1442d13824ca8ebb061ca9436c, type: 3}
+  m_Name: Attack
+  m_EditorClassIdentifier: Oldwiolence.FSMAI::FSMAI.FSMState
+  graph: {fileID: 11400000}
+  position: {x: 744, y: -1416}
+  ports:
+    keys:
+    - entry
+    - transitions
+    - transitions 0
+    values:
+    - _fieldName: entry
+      _node: {fileID: 4313475893415332120}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: trueState
+        node: {fileID: 1345712014280879327}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: transitions
+      _node: {fileID: 4313475893415332120}
+      _typeQualifiedName: System.Collections.Generic.List`1[[FSMAI.FSMTransition,
+        Oldwiolence.FSMAI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: transitions 0
+      _node: {fileID: 4313475893415332120}
+      _typeQualifiedName: FSMAI.FSMTransition, Oldwiolence.FSMAI, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 7600469711152978379}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  entry: 0
+  updateActions:
+  - {fileID: 11400000, guid: bea168977c46dc24eb925b8bdad88594, type: 2}
+  - {fileID: 11400000, guid: ee67cd57f3465eb43a5aa31df9dbcbfe, type: 2}
+  enterActions: []
+  exitActions: []
+  transitions:
+  - {fileID: 11400000, guid: 46894cd239ab57046b6629e8dc1d2cde, type: 2}
+--- !u!114 &4695219457026774023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8f8b82f5ed7a574391db1af0cac7ccc, type: 3}
+  m_Name: Stay In State
+  m_EditorClassIdentifier: Oldwiolence.FSMAI::FSMAI.FSMState_StayInCurrent
+  graph: {fileID: 11400000}
+  position: {x: 584, y: 552}
+  ports:
+    keys:
+    - entry
+    values:
+    - _fieldName: entry
+      _node: {fileID: 4695219457026774023}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: falseState
+        node: {fileID: -5081509433825272867}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: 0
+--- !u!114 &4847306899676167719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10e66d1442d13824ca8ebb061ca9436c, type: 3}
+  m_Name: Idle
+  m_EditorClassIdentifier: Oldwiolence.FSMAI::FSMAI.FSMState
+  graph: {fileID: 11400000}
+  position: {x: -88, y: -536}
+  ports:
+    keys:
+    - entry
+    - transitions
+    - transitions 0
+    values:
+    - _fieldName: entry
+      _node: {fileID: 4847306899676167719}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: exit
+        node: {fileID: 6499170687226738946}
+        reroutePoints: []
+      - fieldName: falseState
+        node: {fileID: 7600469711152978379}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: transitions
+      _node: {fileID: 4847306899676167719}
+      _typeQualifiedName: System.Collections.Generic.List`1[[FSMAI.FSMTransition,
+        Oldwiolence.FSMAI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: transitions 0
+      _node: {fileID: 4847306899676167719}
+      _typeQualifiedName: FSMAI.FSMTransition, Oldwiolence.FSMAI, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: -910737799300949000}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  entry: 0
+  updateActions: []
+  enterActions:
+  - {fileID: 11400000, guid: bafd086a25c62844b83fa7ed6ace9e65, type: 2}
+  exitActions: []
+  transitions:
+  - {fileID: 11400000, guid: 46894cd239ab57046b6629e8dc1d2cde, type: 2}
+--- !u!114 &6469860522698164521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10e66d1442d13824ca8ebb061ca9436c, type: 3}
+  m_Name: Dead
+  m_EditorClassIdentifier: Oldwiolence.FSMAI::FSMAI.FSMState
+  graph: {fileID: 11400000}
+  position: {x: 984, y: 296}
+  ports:
+    keys:
+    - entry
+    - transitions
+    values:
+    - _fieldName: entry
+      _node: {fileID: 6469860522698164521}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: trueState
+        node: {fileID: -5081509433825272867}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: transitions
+      _node: {fileID: 6469860522698164521}
+      _typeQualifiedName: System.Collections.Generic.List`1[[FSMAI.FSMTransition,
+        Oldwiolence.FSMAI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: 0
+  updateActions: []
+  enterActions:
+  - {fileID: 11400000, guid: bafd086a25c62844b83fa7ed6ace9e65, type: 2}
+  - {fileID: 11400000, guid: a29ca891911b7324da49c343e32540f4, type: 2}
+  exitActions: []
+  transitions: []
+--- !u!114 &6499170687226738946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19627d261b031ac4aa3e834cd9aac7ad, type: 3}
+  m_Name: START
+  m_EditorClassIdentifier: Oldwiolence.FSMAI::FSMAI.FSMState_Initial
+  graph: {fileID: 11400000}
+  position: {x: -472, y: -520}
+  ports:
+    keys:
+    - exit
+    values:
+    - _fieldName: exit
+      _node: {fileID: 6499170687226738946}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: entry
+        node: {fileID: 4847306899676167719}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  exit: 0
+--- !u!114 &6676830022143172265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8f8b82f5ed7a574391db1af0cac7ccc, type: 3}
+  m_Name: Stay In State
+  m_EditorClassIdentifier: Oldwiolence.FSMAI::FSMAI.FSMState_StayInCurrent
+  graph: {fileID: 11400000}
+  position: {x: 744, y: -152}
+  ports:
+    keys:
+    - entry
+    values:
+    - _fieldName: entry
+      _node: {fileID: 6676830022143172265}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: falseState
+        node: {fileID: -910737799300949000}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: 0
+--- !u!114 &7600469711152978379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d851a72539fe20140af2e7e5a1849d5e, type: 3}
+  m_Name: Fork
+  m_EditorClassIdentifier: Oldwiolence.FSMAI::FSMAI.FSMTransitionFork
+  graph: {fileID: 11400000}
+  position: {x: -232, y: -776}
+  ports:
+    keys:
+    - entry
+    - trueState
+    - falseState
+    values:
+    - _fieldName: entry
+      _node: {fileID: 7600469711152978379}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: transitions 1
+        node: {fileID: -4249722693190199155}
+        reroutePoints: []
+      - fieldName: transitions 0
+        node: {fileID: 4313475893415332120}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: trueState
+      _node: {fileID: 7600469711152978379}
+      _typeQualifiedName: FSMAI.FSMStateBase, Oldwiolence.FSMAI, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: -7306836702450289078}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: falseState
+      _node: {fileID: 7600469711152978379}
+      _typeQualifiedName: FSMAI.FSMStateBase, Oldwiolence.FSMAI, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 4847306899676167719}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: 0
+  trueState: {fileID: 0}
+  falseState: {fileID: 0}
