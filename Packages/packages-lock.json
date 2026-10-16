@@ -8,12 +8,13 @@
       "hash": "d6effd70f5574369e3415c423ef3e621ea309564"
     },
     "com.oldwiolence.fsmai": {
-      "version": "file:com.oldwiolence.fsmai",
+      "version": "https://github.com/newvid13/FSMAI-Package.git",
       "depth": 0,
-      "source": "embedded",
+      "source": "git",
       "dependencies": {
         "com.github.siccity.xnode": "1.8.0"
-      }
+      },
+      "hash": "eadd6db02b9f7a31557ebe9b44e32733b98e7681"
     },
     "com.unity.ai.navigation": {
       "version": "2.0.10",

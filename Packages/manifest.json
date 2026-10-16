@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "com.github.siccity.xnode": "https://github.com/siccity/xNode.git",
+    "com.oldwiolence.fsmai": "https://github.com/newvid13/FSMAI-Package.git",
     "com.unity.ai.navigation": "2.0.10",
     "com.unity.collab-proxy": "2.11.3",
     "com.unity.ide.visualstudio": "2.0.26",
